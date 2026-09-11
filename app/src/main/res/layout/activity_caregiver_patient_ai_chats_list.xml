@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaregiverListActivity"
+    android:fitsSystemWindows="true">
+
+    <!-- <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/addpetbook"
+         android:layout_width="match_parent"
+         android:backgroundTint="#CAEFEB"
+         android:layout_height="80dp"
+         android:src="@drawable/img_22"
+         app:tint="@color/appcolor"
+         android:layout_marginLeft="270dp"
+         android:layout_marginTop="600dp"
+         />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alert Notifications"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp" />
+
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            app:startIconTint="@color/appcolor"-->
+        <!--            app:startIconDrawable="@drawable/baseline_search_24">-->
+        <!--            <EditText-->
+        <!--                android:background="#F0F6F6"-->
+        <!--                android:id="@+id/search123"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:hint="PetName "-->
+        <!--                android:layout_marginHorizontal="20dp"-->
+        <!--                android:textColorHint="@color/black"-->
+        <!--                >-->
+        <!--            </EditText>-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/cycle1231book">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bar123book"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

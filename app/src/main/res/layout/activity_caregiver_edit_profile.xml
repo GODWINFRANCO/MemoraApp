@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".CaregiverEditProfile"
+    android:id="@+id/main"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- HEADER -->
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="#A10D0D"
+            android:padding="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/ceditbackbtn"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/outline_arrow_back_24"
+                android:layout_centerVertical="true"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="52dp" />
+
+        </RelativeLayout>
+
+        <!-- TOP BLUE GRADIENT -->
+        <View
+            android:id="@+id/gradientTop"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- PROFILE IMAGE CONTAINER -->
+        <RelativeLayout
+            android:id="@+id/profilePicContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-40dp"
+            app:layout_constraintTop_toBottomOf="@id/gradientTop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/ceditprofileImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/outline_account_circle_24"
+                android:background="@drawable/circle_gray"
+                android:scaleType="centerInside"
+                android:padding="15dp" />
+
+            <ImageView
+                android:id="@+id/ceditaddimg"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/outline_add_a_photo_24"
+                android:background="@drawable/circle_red"
+                android:padding="8dp"
+                android:layout_alignBottom="@id/profileImage"
+                android:layout_alignEnd="@id/profileImage"
+                android:layout_marginBottom="-5dp"
+                android:layout_marginEnd="-5dp"
+                app:tint="@android:color/white"
+                tools:ignore="UnknownId" />
+        </RelativeLayout>
+
+        <!-- WHITE FORM CARD -->
+        <LinearLayout
+            android:id="@+id/formCard"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_top_white"
+            android:padding="20dp"
+            android:layout_marginTop="-30dp"
+            app:layout_constraintTop_toBottomOf="@id/profilePicContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- FULL NAME -->
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Full Name"
+                android:textSize="13sp"
+                android:textColor="#555"
+                android:layout_marginBottom="4dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:padding="12dp"
+                android:background="@drawable/input_box">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/outline_account_circle_24"
+                    app:tint="#888" />
+
+                <EditText
+                    android:id="@+id/ceditname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your name"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="12dp"/>
+            </LinearLayout>
+
+            <!-- PHONE -->
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Phone Number"
+                android:layout_marginTop="12dp"
+                android:textSize="13sp"
+                android:textColor="#555" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:padding="12dp"
+                android:background="@drawable/input_box">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/outline_add_call_24"
+                    app:tint="#888" />
+
+                <EditText
+                    android:id="@+id/ceditphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:hint="Enter your phone number"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="12dp"/>
+            </LinearLayout>
+
+            <!-- EMAIL -->
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Email Address"
+                android:layout_marginTop="12dp"
+                android:textSize="13sp"
+                android:textColor="#555" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:background="@drawable/input_box">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/baseline_email_24"
+                    app:tint="#888" />
+
+                <EditText
+                    android:id="@+id/ceditmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Enter your email"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="12dp" />
+            </LinearLayout>
+
+            <!-- ADDRESS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:layout_marginTop="12dp"
+                android:textSize="13sp"
+                android:textColor="#555" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:padding="12dp"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:background="@drawable/input_box">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/outline_add_location_alt_24"
+                    android:layout_marginTop="4dp"
+                    app:tint="#888" />
+
+                <EditText
+                    android:id="@+id/ceditaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your address"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="12dp"
+                    android:lines="2"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fee amount"
+                android:layout_marginTop="12dp"
+                android:textSize="13sp"
+                android:textColor="#555" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:background="@drawable/input_box">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/outline_currency_rupee_circle_24"
+                    app:tint="#888" />
+
+                <EditText
+                    android:id="@+id/ceditfee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your fee amount"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="12dp" />
+            </LinearLayout>
+
+            <!-- DATE OF BIRTH -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth"
+                android:layout_marginTop="12dp"
+                android:textSize="13sp"
+                android:textColor="#555" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:padding="12dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/input_box">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/outline_calendar_month_24"
+                    app:tint="#888" />
+
+                <EditText
+                    android:id="@+id/ceditdob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:hint="Select date"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:inputType="none"
+                    android:background="@android:color/transparent" />
+
+            </LinearLayout>
+            <!-- PASSWORD -->
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Password"
+                android:layout_marginTop="12dp"
+                android:textSize="13sp"
+                android:textColor="#555" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/input_box">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_lock_lock"
+                    app:tint="#888"
+                    android:layout_marginTop="2dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundMode="none"
+                    app:hintEnabled="false"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="#888">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ceditpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Enter new password"
+                        android:inputType="textPassword"
+                        android:textColor="#212121"
+                        android:textColorHint="#757575"
+                        android:textSize="14sp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingStart="12dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- SAVE BUTTON -->
+            <Button
+                android:id="@+id/ceditsave"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:text="Save Changes"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:background="@drawable/blue_btn" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

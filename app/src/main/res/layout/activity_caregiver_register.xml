@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context=".CaregiverRegister">
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Memora"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create your account"
+        android:textColor="#EEEEEE"
+        android:textSize="16sp"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- White Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_below="@id/subtitle"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Full Name -->
+                <EditText
+                    android:id="@+id/cregname"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Full Name"
+                    android:drawableLeft="@drawable/outline_account_circle_24"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="16dp"
+                    android:background="@android:drawable/edit_text"/>
+
+                <!-- DOB -->
+                <EditText
+                    android:id="@+id/cregdob"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Date of Birth"
+                    android:drawableLeft="@drawable/outline_calendar_month_24"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="16dp"
+                    android:background="@android:drawable/edit_text"/>
+
+                <!-- Phone -->
+                <EditText
+                    android:id="@+id/cregphonenum"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:drawableLeft="@drawable/outline_add_call_24"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="16dp"
+                    android:background="@android:drawable/edit_text"/>
+
+                <!-- Email -->
+                <EditText
+                    android:id="@+id/cregmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Email ID"
+                    android:inputType="textEmailAddress"
+                    android:drawableLeft="@drawable/baseline_email_24"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="16dp"
+                    android:background="@android:drawable/edit_text"/>
+
+                <!-- Password -->
+                <EditText
+                    android:id="@+id/cregpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:drawableLeft="@android:drawable/ic_lock_lock"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="12dp"
+                    android:background="@android:drawable/edit_text"/>
+
+                <!-- Gender -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"/>
+
+                <RadioGroup
+                    android:id="@+id/cgen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"/>
+
+                    <RadioButton
+                        android:id="@+id/female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"/>
+
+                    <RadioButton
+                        android:id="@+id/other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other"/>
+                </RadioGroup>
+
+                <!-- Address -->
+                <EditText
+                    android:id="@+id/cregaddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Address"
+                    android:padding="16dp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:background="@android:drawable/edit_text"/>
+
+                <!-- Fee -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter your fee amount"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"/>
+
+                <EditText
+                    android:id="@+id/cregfee"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="Fee amount"
+                    android:drawableLeft="@drawable/outline_currency_rupee_circle_24"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="16dp"
+                    android:inputType="number"
+                    android:background="@android:drawable/edit_text"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Upload Certificate"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_marginTop="150dp">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/uploadCertificate"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/outline_add_a_photo_24"
+                        android:contentDescription="Upload Photo" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- Register -->
+                <Button
+                    android:id="@+id/cregregisterbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Register"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="@color/blue_900"/>
+
+                <!-- Login -->
+                <TextView
+                    android:id="@+id/creglogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an account? Login"
+                    android:textColor="@color/blue_900"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

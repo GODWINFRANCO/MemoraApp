@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+    </queries>
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="Memora"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MemoraApp"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".CaregiverAlertListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientNewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".PatientForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverNewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverReminderListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReminderListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverReminder"
+            android:exported="false" />
+        <activity
+            android:name=".PatientFamiliarPhotoTest"
+            android:exported="false" />
+        <activity
+            android:name=".PatientFamiliarPhotoUpload"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverPatientAiChatsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverPatientFilesListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverPatientListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Add_Memory_album"
+            android:exported="false" />
+        <activity
+            android:name=".ChatBotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SOS_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentSuccess"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UploadFiles"
+            android:exported="false" />
+        <activity
+            android:name=".UploadFilesListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DigiLockerUploads"
+            android:exported="false" />
+        <activity
+            android:name=".UploadFilesGetOTP"
+            android:exported="false" />
+        <activity
+            android:name=".PatientJournalListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientJournal"
+            android:exported="false" />
+        <activity
+            android:name=".PatientSidePaymentFullActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientSideBookingsListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BookingRequest_Full_activity"
+            android:exported="false" />
+        <activity
+            android:name=".gradient_bg"
+            android:exported="false" />
+        <activity
+            android:name=".BookingRequestListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientCaregiverBooking"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverEditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverHome"
+            android:exported="false"
+            android:label="@string/title_activity_caregiver_home" />
+        <activity
+            android:name=".CaregiverProfile"
+            android:exported="false" />
+        <activity
+            android:name=".PatientEditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".PatientProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".FirstPage"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverLogin"
+            android:exported="false" />
+        <activity
+            android:name=".CaregiverRegister"
+            android:exported="false" />
+        <activity
+            android:name=".PatientLogin"
+            android:exported="false" />
+        <activity
+            android:name=".PatientRegister"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".ReminderReceiver" />
+        <receiver android:name=".CaregiverReminder" />
+    </application>
+
+</manifest>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F8F9FE"> <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Capture a Moment"
+    android:textSize="28sp"
+    android:fontFamily="sans-serif-medium"
+    android:textColor="#1A237E"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Every detail matters."
+        android:textSize="16sp"
+        android:textColor="#757575"
+        android:layout_marginBottom="32dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <EditText
+            android:id="@+id/edtMemoryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your story here..."
+            android:minHeight="200dp"
+            android:gravity="top"
+            android:padding="20dp"
+            android:background="@android:color/transparent"
+            android:lineSpacingExtra="4dp"
+            android:textSize="16sp"
+            android:textColor="#424242"/>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddMemory"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Save to Memories"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="16dp"
+        app:icon="@android:drawable/ic_menu_save"
+        app:iconGravity="textStart"
+        android:layout_marginBottom="16dp"/>
+
+</LinearLayout>

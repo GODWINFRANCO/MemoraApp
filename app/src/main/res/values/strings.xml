@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Memora App</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_home">Home</string>
+    <string name="title_journal">Journal</string>
+    <string name="title_reminders">Reminders</string>
+    <string name="title_activity_caregiver_home">CaregiverHome</string>
+</resources>
